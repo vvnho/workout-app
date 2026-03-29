@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Workout Tracker</title>
+    <script>
+      // GitHub Pages SPA redirect: converts path to query string,
+      // then index.html picks it up and restores the route.
+      var path = window.location.pathname;
+      var search = window.location.search;
+      var hash = window.location.hash;
+      window.location.replace(
+        window.location.origin + '/workout-app/?p=' +
+        encodeURIComponent(path.replace('/workout-app/', '/')) +
+        (search ? '&q=' + encodeURIComponent(search.slice(1)) : '') +
+        hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

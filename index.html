@@ -34,9 +34,20 @@
         src: url(fonts/merriweather-italic.woff2) format('woff2');
       }
     </style>
-    <script type="module" crossorigin src="/workout-app/assets/index-C3ryyRYz.js"></script>
+    <script type="module" crossorigin src="/workout-app/assets/index-BF4D9Hp5.js"></script>
   </head>
   <body>
     <div id="root"></div>
+    <!-- GitHub Pages SPA: restore route from 404 redirect -->
+    <script>
+      (function () {
+        var q = new URLSearchParams(window.location.search);
+        var p = q.get('p');
+        if (p) {
+          var restored = p + (q.get('q') ? '?' + q.get('q') : '') + window.location.hash;
+          window.history.replaceState(null, '', '/workout-app' + restored);
+        }
+      })();
+    </script>
   </body>
 </html>
